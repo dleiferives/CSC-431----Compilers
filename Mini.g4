@@ -4,7 +4,6 @@ grammar Mini;
 // build down from program
 program: types declarations functions EOF;
 
-
 type: 'int' | 'bool' | 'struct' ID;
 return_type: type | 'void';
 
