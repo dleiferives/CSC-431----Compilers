@@ -1,0 +1,44 @@
+
+Explaining Optionals:
+
+#Part 1  the explanation of optionals
+If we have a value that can either be a value or null we use the ? 
+const a: ?i32;
+
+This means that it can either be null or a number. 
+
+Therefore if we do:
+const a:?i32 = 5;
+if( a != null){
+        print(a);
+}
+
+it will not work because it is an optional type. We have to unwrap it.
+
+const a:?i32 = 5;
+if(a != null){
+        print(a.?);
+}
+
+would be the proper way to write it.
+
+now if we did.
+
+const a:?i32 = 5;
+print(a.?);
+and for some reason a was null the program would panic.
+
+#Part 2, how to actually use them lmao.
+
+So if we have this code:
+
+const b:?i32 = 5;
+if (b) {
+        print(b.?);
+}
+
+this would work, doing an if on an optional will be true if it is not null
+
+
+
+
